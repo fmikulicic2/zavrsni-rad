@@ -1,0 +1,263 @@
+/* CIJELA STRANICA */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #12131c;
+    background-image: url("pozadina1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #eceaf6;
+    font-family: "Cascadia Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* REFEKT OPET */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(166, 255, 95, 0.08),
+            transparent 60%
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.018) 0px,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+    z-index: 1000;
+}
+
+
+/* KARTICA IGRE */
+
+.kartica {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 650px;
+    padding: 45px;
+    background-color: rgba(29, 31, 47, 0.94);
+    border: 1px solid #2c2f45;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 35px rgba(166, 255, 95, 0.08);
+}
+
+
+/* OZNAKA */
+
+.oznaka {
+    margin: 0 0 20px;
+    color: #a6ff5f;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+}
+
+
+/* NASLOV */
+
+h1 {
+    margin: 0 0 20px;
+    color: #a6ff5f;
+    font-family: "Press Start 2P", monospace;
+    font-size: 35px;
+    text-shadow: 0 0 18px rgba(166, 255, 95, 0.35);
+}
+
+
+/* OPIS */
+
+.opis {
+    margin: 0 0 30px;
+    color: #8b8ea8;
+    font-size: 16px;
+}
+
+
+/* PROSTOR ZA KUT */
+
+.kut {
+    position: relative;
+    width: 400px;
+    height: 280px;
+    margin: 20px auto 30px;
+    background-color: #12131c;
+    border: 1px solid #2c2f45;
+    border-radius: 8px;
+}
+
+
+/* LINIJE KUTA */
+
+.linija {
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    left: 200px;
+    bottom: 60px;
+    background-color: #a6ff5f;
+    transform-origin: left center;
+    box-shadow: 0 0 10px rgba(166, 255, 95, 0.5);
+}
+
+.prva {
+    transform: rotate(0deg);
+}
+
+
+/* SREDIŠNJA TOČKA KUTA */
+
+.kut::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 195px;
+    bottom: 57px;
+    background-color: #eceaf6;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(166, 255, 95, 0.7);
+}
+
+
+/* UNOS ODGOVORA */
+
+.unos {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 120px;
+    padding: 12px;
+    background-color: #12131c;
+    color: #eceaf6;
+    border: 1px solid #a6ff5f;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Cascadia Mono", monospace;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 12px rgba(166, 255, 95, 0.25);
+}
+
+
+/* GUMBI */
+
+.gumbi {
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    background: linear-gradient(
+        135deg,
+        #a6ff5f,
+        #54d96c
+    );
+    color: #12131c;
+    border: none;
+    border-radius: 6px;
+    font-family: "Cascadia Mono", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(166, 255, 95, 0.25);
+}
+
+
+/* PORUKA */
+
+#poruka {
+    min-height: 25px;
+    margin: 25px 0;
+    color: #eceaf6;
+    font-weight: bold;
+}
+
+
+/* POVRATAK NA GLAVNU STRANICU */
+
+.povratak {
+    display: inline-block;
+    margin-top: 15px;
+    color: #a6ff5f;
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    text-decoration: none;
+}
+
+.povratak:hover {
+    text-shadow: 0 0 10px rgba(166, 255, 95, 0.6);
+}
+
+
+/* PRILAGODBA ZA MOBITEL */
+
+@media (max-width: 600px) {
+    body {
+        overflow: auto;
+    }
+
+    .kartica {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .opis {
+        font-size: 14px;
+    }
+
+    .kut {
+        width: 300px;
+        height: 230px;
+    }
+
+    .linija {
+        width: 100px;
+        left: 150px;
+        bottom: 50px;
+    }
+
+    .kut::after {
+        left: 145px;
+        bottom: 47px;
+    }
+
+    button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}

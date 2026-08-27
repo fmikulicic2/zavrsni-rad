@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lov na blago</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style12.css">
+</head>
+
+<body>
+    <main class="kartica">
+        <p class="oznaka">// IGRA 12</p>
+
+        <h1>LOV NA BLAGO</h1>
+
+        <p class="opis">
+            Pronađi blago prije nego pronađeš bombu!
+        </p>
+
+        <div class="stanje">
+            <p>PREOSTALI POKUŠAJI</p>
+            <span id="pokusaji">3</span>
+        </div>
+
+        <div class="kutije">
+            <button id="p1" onclick="otvori(1)">?</button>
+            <button id="p2" onclick="otvori(2)">?</button>
+            <button id="p3" onclick="otvori(3)">?</button>
+            <button id="p4" onclick="otvori(4)">?</button>
+            <button id="p5" onclick="otvori(5)">?</button>
+            <button id="p6" onclick="otvori(6)">?</button>
+            <button id="p7" onclick="otvori(7)">?</button>
+            <button id="p8" onclick="otvori(8)">?</button>
+            <button id="p9" onclick="otvori(9)">?</button>
+        </div>
+
+        <div class="gumbi">
+            <button class="nova-igra" onclick="novaIgra()">
+                NOVA IGRA
+            </button>
+        </div>
+
+        <p id="poruka"></p>
+
+        <a href="index.html" class="povratak">
+            ← NAZAD NA IGRE
+        </a>
+    </main>
+
+    <script src="script12.js"></script>
+</body>
+</html>

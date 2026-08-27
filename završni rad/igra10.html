@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veće ili manje?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style10.css">
+</head>
+
+<body>
+    <main class="kartica">
+        <p class="oznaka">// IGRA 10</p>
+
+        <h1>VEĆE ILI MANJE?</h1>
+
+        <p class="opis">
+            Hoće li sljedeći broj biti veći ili manji?
+        </p>
+
+        <div class="prikaz-broja">
+            <p>TRENUTNI BROJ</p>
+            <span id="broj"></span>
+        </div>
+
+        <div class="gumbi">
+            <button onclick="pogodi('manje')">MANJE</button>
+            <button onclick="pogodi('vece')">VEĆE</button>
+        </div>
+
+        <p id="poruka"></p>
+
+        <a href="index.html" class="povratak">
+            ← NAZAD NA IGRE
+        </a>
+    </main>
+
+    <script src="script10.js"></script>
+</body>
+</html>

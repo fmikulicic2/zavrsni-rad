@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otvaranje sefa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style6.css">
+</head>
+
+<body>
+    <main class="kartica">
+        <p class="oznaka">// IGRA 06</p>
+
+        <h1>OTVARANJE SEFA</h1>
+
+        <p class="opis">
+            Pročitaj tragove i pogodi četveroznamenkasti kod.
+        </p>
+
+        <div class="tragovi">
+            <p id="trag1"></p>
+            <p id="trag2"></p>
+            <p id="trag3"></p>
+            <p id="trag4"></p>
+        </div>
+
+        <div class="unos">
+            <input
+                type="text"
+                id="unos"
+                maxlength="4"
+                inputmode="numeric"
+                placeholder="UPIŠI KOD"
+            >
+        </div>
+
+        <div class="gumbi">
+            <button onclick="provjeri()">OTKLJUČAJ</button>
+            <button onclick="novaIgra()">NOVI SEF</button>
+        </div>
+
+        <p id="poruka"></p>
+
+        <a href="index.html" class="povratak">
+            ← NAZAD NA IGRE
+        </a>
+    </main>
+
+    <script src="script6.js"></script>
+</body>
+</html>
